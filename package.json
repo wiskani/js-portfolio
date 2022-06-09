@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "node ./scripts/create-env.js && webpack --mode production --config webpack",
     "dev": "webpack --config webpack.config.dev.js",
     "build:watch": "webpack --watch --config webpack.config.js",
     "start": "live-server ./dist --port=8081"
@@ -39,7 +39,7 @@
     "html-webpack-plugin": "^5.5.0",
     "live-server": "^1.2.2",
     "mini-css-extract-plugin": "^2.6.0",
-    "stylus": "^0.58.0",
+    "stylus": "^0.58.1",
     "stylus-loader": "^7.0.0",
     "terser-webpack-plugin": "^5.3.1",
     "url-loader": "^4.1.1",
